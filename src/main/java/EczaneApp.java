@@ -168,7 +168,7 @@ public class EczaneApp {
 
     private static void personelYaz(List<Personel> personelList){
         File file=new File(".\\VeriTabani\\Personel.txt");
-        try (FileOutputStream fileOutputStream=new FileOutputStream(file,true);
+        try (FileOutputStream fileOutputStream=new FileOutputStream(file,false);
              ObjectOutputStream objectOutputStream= new ObjectOutputStream(fileOutputStream)) {
             objectOutputStream.writeObject(personelList);
         }
@@ -179,7 +179,7 @@ public class EczaneApp {
 
     private static void stokYaz(List<Stok> Stok){
         File file=new File(".\\VeriTabani\\Stok.txt");
-        try (FileOutputStream fileOutputStream=new FileOutputStream(file,true);
+        try (FileOutputStream fileOutputStream=new FileOutputStream(file,false);
              ObjectOutputStream objectOutputStream= new ObjectOutputStream(fileOutputStream)) {
             objectOutputStream.writeObject(stokList);
         }
@@ -190,7 +190,7 @@ public class EczaneApp {
 
     private static void musteriYaz(List<Musteri> musteri){
         File file=new File(".\\VeriTabani\\Musteri.txt");
-        try (FileOutputStream fileOutputStream=new FileOutputStream(file,true);
+        try (FileOutputStream fileOutputStream=new FileOutputStream(file,false);
              ObjectOutputStream objectOutputStream= new ObjectOutputStream(fileOutputStream)) {
             objectOutputStream.writeObject(musteri);
         }
